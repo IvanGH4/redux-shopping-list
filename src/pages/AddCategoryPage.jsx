@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addCategory } from "../redux/actions";
 import { v4 as uuidv4 } from "uuid";
 import moment from "moment";
+import slugify from "slugify";
 
 function AddCategoryPage() {
   const [categoryName, setCategoryName] = useState("");
@@ -18,6 +19,7 @@ function AddCategoryPage() {
         name: categoryName,
         id: uuidv4(),
         createdAt: moment().format("D - M - YYYY"),
+        slug: slugify(categoryName.toLowerCase()),
       })
     );
     setCategoryName("");
@@ -26,7 +28,7 @@ function AddCategoryPage() {
   return (
     <div className="container">
       <div className="row justify-content-center py-5">
-        <Link to="/" className="text-decoration-none text-light">
+        <Link to="/categories" className="text-decoration-none text-light">
           <i className="fas fa-arrow-left"></i> Go back
         </Link>
         <div className="col-md-4">

@@ -3,13 +3,13 @@ const initialState = [
     id: 1,
     name: "Pepsi",
     done: false,
-    category: "Beverage",
+    category: "beverage",
   },
   {
     id: 2,
     name: "Coke",
     done: false,
-    category: "Beverage",
+    category: "beverage",
   },
 ];
 

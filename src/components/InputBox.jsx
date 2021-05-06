@@ -30,15 +30,23 @@ function InputBox() {
   function handleClick() {
     dispatch(removeAllItems(name));
     dispatch(removeCategory(name));
-    history.push("/");
+    history.push("/categories");
   }
 
   return (
     <div className="row justify-content-center">
       <div className="d-flex justify-content-around align-items-center">
-        <Link to="/" className="text-decoration-none text-light">
-          Home
-        </Link>
+        <div>
+          <Link to="/" className="text-decoration-none text-light">
+            Home
+          </Link>
+          <Link
+            to="/categories"
+            className="text-decoration-none text-light ms-3"
+          >
+            Back
+          </Link>
+        </div>
         <button className="btn fs-4 text-danger" onClick={handleClick}>
           <i className="far fa-trash-alt"></i>
         </button>

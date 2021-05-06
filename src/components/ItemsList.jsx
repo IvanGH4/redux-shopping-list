@@ -5,6 +5,7 @@ import Item from "./Item";
 
 function ItemsList() {
   let { name } = useParams();
+  console.log(name);
   // const items = useSelector((state) =>
   //   state.itemReducer.map((item) => item.category === name)
   // );

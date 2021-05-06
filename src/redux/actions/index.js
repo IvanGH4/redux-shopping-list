@@ -47,14 +47,16 @@ export const removeCategory = (category) => {
   };
 };
 
-// export const filterDone = () => {
-//   return {
-//     type: "FILTER_DONE",
-//   };
-// };
+export const addUser = (user) => {
+  return {
+    type: "LOG_IN",
+    payload: user,
+  };
+};
 
-// export const filterPending = () => {
-//   return {
-//     type: "FILTER_PENDING",
-//   };
-// };
+export const updateUser = (username) => {
+  return {
+    type: "UPDATE_USER",
+    payload: username,
+  };
+};

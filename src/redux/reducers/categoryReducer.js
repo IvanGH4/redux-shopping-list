@@ -3,7 +3,7 @@ const categoryReducer = (state = [], action) => {
     case "ADD_CATEGORY":
       return [...state, action.payload];
     case "REMOVE_CATEGORY":
-      return [...state.filter((item) => item.name !== action.payload)];
+      return [...state.filter((item) => item.slug !== action.payload)];
     default:
       return state;
   }
