@@ -1,0 +1,22 @@
+.add-form {
+  border-bottom: 2px solid #fff;
+}
+
+.add-form input {
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+.add-form input::placeholder {
+  color: #fff;
+}
+
+.add-form input:focus {
+  outline: none;
+}
+
+.add-form button {
+  color: #fff;
+}
